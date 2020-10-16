@@ -58,6 +58,6 @@ function Collectionator_ElvUI.Skin()
       end
     end
     S:HandleButton(view.RefreshButton)
-    view.RefreshButton:SetSize(22)
+    view.RefreshButton:SetSize(22, 22)
   end
 end
