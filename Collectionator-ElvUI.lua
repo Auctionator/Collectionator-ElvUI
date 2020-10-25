@@ -32,6 +32,11 @@ local function HandleHeaders(frame)
 	end
 end
 
+local function HandleResetButton(button)
+  S:HandleButton(button)
+  button.texture:SetTexture(E.Media.Textures.Close)
+end
+
 Collectionator_ElvUI = {}
 function Collectionator_ElvUI.Skin()
   S:HandleTab(AuctionatorTabs_Collecting)
@@ -55,8 +60,17 @@ function Collectionator_ElvUI.Skin()
     for _, child in ipairs({view:GetChildren()}) do
       if child.CheckBox ~= nil then
         S:HandleCheckBox(child.CheckBox)
+        child.CheckBox:Size(20, 20)
+      elseif child.GetFilterName ~= nil then
+        S:HandleButton(child)
+        HandleResetButton(child.ResetButton)
+      elseif child.GetMin ~= nil then
+        HandleResetButton(child.ResetButton)
+        S:HandleEditBox(child.MinBox)
+        S:HandleEditBox(child.MaxBox)
       end
     end
+    S:HandleEditBox(view.TextFilter)
     S:HandleButton(view.RefreshButton)
     view.RefreshButton:SetSize(22, 22)
   end
