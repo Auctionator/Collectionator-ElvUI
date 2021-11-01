@@ -43,14 +43,14 @@ function Collectionator_ElvUI.Skin()
 
   local ctf = AuctionHouseFrame.CollectionatorTabFrame
   local buttons = {
-    ctf.TMogButton, ctf.PetButton, ctf.ToyButton, ctf.MountButton
+    ctf.TMogButton, ctf.PetButton, ctf.ToyButton, ctf.MountButton, ctf.RecipeButton, ctf.OptionsButton, ctf.FullScanButton
   }
   for _, button in ipairs(buttons) do
     S:HandleButton(button)
   end
 
   local views = {
-    ctf.TMogView, ctf.PetView, ctf.ToyView, ctf.MountView
+    ctf.TMogView, ctf.PetView, ctf.ToyView, ctf.MountView, ctf.RecipeView
   }
   for _, view in ipairs(views) do
     S:HandleInsetFrame(view.ResultsListingInset)
