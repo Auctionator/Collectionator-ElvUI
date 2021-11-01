@@ -1,8 +1,8 @@
-## Interface: 90001
+## Interface: 90100
 ## Title: Collectionator ElvUI Skin
-## Version: AUTO_GENERATED_VERSION
+## Version: 2
 ## Author: plusmouse
 ## X-Website: http://mods.curse.com/addons/wow/auctionator
-## RequiredDeps: Auctionator, ElvUI
+## RequiredDeps: Collectionator, ElvUI
 
 Collectionator-ElvUI.lua
