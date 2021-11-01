@@ -68,6 +68,12 @@ function Collectionator_ElvUI.Skin()
         HandleResetButton(child.ResetButton)
         S:HandleEditBox(child.MinBox)
         S:HandleEditBox(child.MaxBox)
+      elseif child.SetupRadioButtons then
+        for _, child in ipairs({child:GetChildren()}) do
+          if child.isAuctionatorRadio then
+            S:HandleRadioButton(child.RadioButton)
+          end
+        end
       end
     end
     S:HandleEditBox(view.TextFilter)
